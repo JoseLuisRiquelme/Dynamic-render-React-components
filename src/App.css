@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: row;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftside{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  background-color: #16b8e0;
+  width: 45%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}
+.imagen {
+  background-image: url("https://svgshare.com/i/rS7.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 150vh;
+  width: 30vw;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+  background-color: #16b8e0;
+  border: 2px solid #097894;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.btn:hover, .btn-delete:hover {
+  opacity: 0.8;
+}
+
+.btn-delete{
+  margin-top: 15px;
+  width: 30%;
+  height: 45px;
+  background-color: #16b8e0;
+  border: 2px solid #097894;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+li{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+.inputs2{
+  border: 2px solid #16b8e0;
+  border-radius: 4px;
+  align-content: center;
+  margin: 7px;
+}
+form{
+  width: 100%;
+}
+.inputs3{
+  display: flex;
+  flex-direction: column;
+}
+.imgCard{
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+ul{
+  list-style: none
+}
+.divsLi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.linktocode{
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 2px;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #formulario,
+  .contenido {
+    width: 100%;
+  }
+
+ 
+  .imagen {
+    height: 100vh;
+    max-width: 80%;;
+    min-width: 70vw;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .inputs {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .leftside, .inputs{
+    width: 87vw;
   }
-}
